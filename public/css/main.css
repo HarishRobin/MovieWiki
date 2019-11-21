@@ -1,0 +1,206 @@
+/* Styling the body of Index page */
+body{
+    padding: 0%;
+    margin: 0%;
+    font-family: serif;
+    overflow: hidden;
+    background: #000000d4;
+}
+
+.err {
+    color: tomato;
+    text-align: center;
+}
+
+/* Backdrop Styling */
+.bg-img{
+    background: url('/images/background.jpg');
+    height: 100vh;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    filter: blur(5px);
+    background-size: cover;
+}
+
+/* backdrop overlays */
+.bg-content{
+    z-index: 1;
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    color: #53ffbd;
+    text-shadow: 1px 1px 2px darkblue;
+    background: #000000d4;
+}
+
+/* Styling elements for desired look */
+.special{
+    font-style: oblique;
+    color: salmon;
+    text-shadow: 1px 1px 2px saddlebrown;
+}
+
+/* Flex-Container and Flex-item Styling and transistion on Loading */
+.nav-container{
+    display: flex;
+    transition:
+    font-size 0.7s cubic-bezier(.54,1.15,.34,-0.42),
+    flex 0.7s cubic-bezier(.54,1.15,.34,-0.42);
+}
+
+.search-bar{
+    filter: blur(0px);
+    transition:
+    width 0.7s cubic-bezier(.54,1.15,.34,-0.42),
+    flex 0.7s cubic-bezier(.54,1.15,.34,-0.42);
+}
+
+
+.nav-container{
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-basis: 200px;
+    font-size: 4rem;
+}
+
+.nav-container > div {
+    flex: 1 1 85%;
+}
+
+.title{
+    display: flex;
+    cursor: default;
+}
+
+.title{
+    justify-content: center;
+}
+
+
+.search-bar{
+    display: flex;
+    padding: 2% 0;
+}
+
+.search-bar{
+    justify-content: center;
+    align-items: baseline;
+    padding: 5%;
+}
+
+.search-bar *{
+    margin: 0 1%;
+    height: 90%;
+}
+
+.search-bar input{
+    width: 70%;
+}
+
+#searchTitle{
+    padding: 0.5%;
+    border: 1px solid salmon;
+    border-radius: 5px;
+    background: #00000006;
+    color: white;
+    font-size: 1rem;
+}
+
+#searchTitle:focus{
+    border: 1px solid saddlebrown;
+    color: salmon;
+    font-size: 1.25rem;
+}
+
+#searchTitle::placeholder{
+    font-style: italic;
+    font-size: 1rem;
+}
+
+#search {
+    background-color: #00000006;
+    padding: 0.35% 0.625%;
+    color: #53ffbd;
+    border: 1px solid #53ffbd;
+    border-radius: 5px;
+}
+
+#search:hover{
+    background-color: #53ffbd;
+    color: #4b0505;
+    border: 1px solid #4b0505;
+}
+
+/* Making page Medium sized screen responsive */
+@media only screen and (max-width: 900px) {
+    .bg-img {
+        background: url('/images/background.jpg') left no-repeat;
+        background-size: cover;
+    }
+
+    .bg-content {
+        background-color: #000000d4;
+    }
+}
+
+/* Making page Mobile screen responsive */
+@media only screen and (max-width: 600px) {
+
+    .bg-img{
+        background: url('/images/background.jpg') fixed no-repeat;
+        filter: blur(0px);
+        background-size: contain;
+        background-color: none;
+    }
+    
+    .bg-content{
+        height: 100%;
+        top: 42%;
+        position: absolute;
+        background-color: transparent;
+    }
+    
+    .special{
+        text-shadow: 1px 2px 3px #4b0505;    
+    }
+        
+    .nav-container{
+        height: 100%;
+        align-content: flex-start;
+        font-size: 3.5rem;
+    }
+
+    #searchTitle{
+        border: 1px solid #53ffbd;
+        border-radius: 5px;
+        color: #b3b3b3;
+    }
+
+    #searchTitle:focus::placeholder{
+        color: #53ffbd;
+    }
+
+    #searchTitle:focus{
+        border: 1px solid #53ffbd;
+        background-color: transparent;
+        color: #53ffbd;
+        font-size: 1.15rem;
+    }
+
+    #search {
+        color: salmon;
+        padding: 1.25% 1.125%;
+        border: 1px solid salmon;
+        border-radius: 5px;
+    }
+    
+    #search:hover{
+        background-color: salmon;
+        color: whitesmoke;
+        border: 1px solid salmon;
+        border-radius: 5px;
+    }
+}

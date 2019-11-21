@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title MovieWiki
+        link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href="/css/result.css")
+
+    body
+        header
+            .container
+                .title
+                    a.home(href="/")
+                        span.content Movie
+                        span.special Wiki
+                .form-control
+                    form(action="/search", method="GET")
+                        .search-bar
+                            input(type="text", name="searchQuery", id="searchTitle", placeholder="Search for Movies", required)
+                            button(id="search")
+                                img(src="/images/searchicon.png", alt="Search")
+        .result-container
+            .row
+                each obj in response
+                    .col
+                        div #{obj.Title} (#{obj.Year})
+                        .type Type: #{obj.Type}
+                        form(action="/info", method="get")
+                            button.imgButton(type="submit", name="movieID",value=obj.imdbID)
+                                div
+                                    img(src=obj.Poster alt=obj.Title)
+                            button(type="submit", name="movieID", value=obj.imdbID) More About in Here
+            form(action="/search", method="get")
+                .button-container
+                    input(type="hidden", name="searchQuery", value=query)
+                    button(name="page" value=nextPageNo) Expand Search

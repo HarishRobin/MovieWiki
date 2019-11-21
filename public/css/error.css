@@ -1,0 +1,33 @@
+/* Styling Body of Error Page */
+h1{
+    color: #53ffbd;
+    text-align: center;
+}
+
+.problem{
+    color: #d32626;
+    text-decoration: underline;
+}
+
+h1 a{
+    text-decoration: none;
+    color: salmon;
+    text-align: center;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+h1 a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+/* Making page mobile responsive */
+@media only screen and (max-width:600px){
+    h1{
+        font-size: 1rem;
+    }
+    h1 a{
+        font-size: 0.95rem;
+    }
+}

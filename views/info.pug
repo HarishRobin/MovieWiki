@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title MovieWiki
+        link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href="/css/result.css")
+        link(rel="stylesheet", href="/css/info.css")
+    body
+        header
+            .container
+                .title
+                    a.home(href="/")
+                        span.content Movie
+                        span.special Wiki
+                .form-control
+                    form(action="/search", method="GET")
+                        .search-bar
+                            input(type="text", name="searchQuery", id="searchTitle", placeholder="Search for Movies", required)
+                            button(id="search")
+                                img(src="/images/searchicon.png", alt="Search")
+        .info-container
+            .heading #{info.Title} (#{info.Rated}) #{info.Language}
+            .image
+                div
+                    img(src=info.Poster, alt=info.Title)
+            .rating
+                div
+                    img(src="/images/imdb_logo.png", alt="IMDB")
+                    div #[label IMBD Rating:] #{info.imdbRating}/10
+                div
+                    img(src="/images/metacritic_logo.png", alt="MetaCritic")
+                    div #[label MetaCritic Rating:] #{info.Metascore}/100
+            .details
+                div #[label Released On:] #{info.Released}
+                div #[label Duration:] #{info.Runtime}
+                div #[label Genre:] #{info.Genre}
+            .people
+                div #[label Cast:] #{info.Actors}
+                div #[label Director:] #{info.Director}
+            .plot
+                div #[label Plot:]
+                    p #{info.Plot}
+            .return #[label Go Back:]
+                button(id="goBack")
+                    img(src="https://img.icons8.com/cotton/64/000000/circled-left--v1.png",alt="Go Back")
+        script(src="/script/info.js")

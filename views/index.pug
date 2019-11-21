@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title MovieWiki
+        link(rel="shortcut icon", href="/images/favicon.ico", type="image/x-icon")
+        link(rel="stylesheet", href="/css/main.css")
+    body
+        div
+            .bg-img
+            .bg-content
+                if error 
+                    h1.err No Matching result to your search!! Retry Below
+                .nav-container
+                    .title
+                        span.content Movie
+                        span.special Wiki
+                    .form-control
+                        form(action="/search", method="get")
+                            .search-bar
+                                input(type="text", name="searchQuery", id="searchTitle", placeholder="Search for Movies", required)
+                                button(id="search") Search

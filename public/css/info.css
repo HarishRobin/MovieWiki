@@ -1,0 +1,105 @@
+/* Styling Body of Info page */
+
+body{
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 70px;
+    color: white;
+    background: #000000d4;
+}
+
+/* Flex-Containers */
+.info-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Making all Flex-items as Flex-Containers */
+.info-container > *{
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+}
+
+/* Nesting Flexboxes for Responsive and alignable elements */
+.info-container > * > *{
+    font-size: 1.25rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Styling Flex-items individually for desired alignment */
+.heading{
+    font-size: 3rem;
+    padding: 0 2%;
+}
+
+.people{
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.people > * {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.rating *{
+    padding: 1% 0.5%;
+    align-items: center;
+}
+
+.rating img{
+    height: 50%;
+}
+
+.return {
+text-align: center;
+flex-direction: column;
+}
+
+#goBack{
+    width: fit-content;
+    border-radius: 100%;
+    background: transparent;
+    border: transparent;
+}
+
+label{
+    color: salmon;
+    padding-right: 1%;
+}
+
+/* Making page Mobile responsive */
+@media only screen and (max-width: 600px){
+    
+    .info-container > * > *{
+        font-size: 1.25rem;
+    }
+    
+    .heading{
+        font-size: 2rem;
+        padding: 0 1%;
+    }
+    
+    .details, .rating{
+        flex-direction: column;
+        display: flex;
+    }
+
+    .details > * , .rating > *{
+        justify-content: flex-start;
+    }
+        
+    .rating *, .details *{
+        padding: 1% 0.5%;
+        align-items: center;
+    }
+    
+    .rating img{
+        height: 50%;
+    }
+}

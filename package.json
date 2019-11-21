@@ -1,0 +1,36 @@
+{
+  "name": "moviewiki",
+  "version": "1.0.0",
+  "description": "A search engine for finding the movie you are looking for. With a bunch of facilites up the sleeves.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarishRobin/Freshwork_Assignment.git"
+  },
+  "keywords": [
+    "Node.js",
+    "HTML",
+    "CSS",
+    "JS",
+    "Omdbapi",
+    "FetchAPI"
+  ],
+  "author": "HarishRobin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarishRobin/MovieWiki/issues"
+  },
+  "homepage": "https://github.com/HarishRobin/MovieWiki#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.0"
+  }
+}
