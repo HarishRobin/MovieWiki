@@ -28,7 +28,7 @@
   "homepage": "https://github.com/HarishRobin/MovieWiki#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "pug": "^2.0.4"
   },
   "devDependencies": {
